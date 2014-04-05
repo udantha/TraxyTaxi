@@ -3,5 +3,3 @@
  */
 
 Taxi = new Meteor.Collection("taxies");
-
-//Taxi.insert({Phone: "1322432"});
