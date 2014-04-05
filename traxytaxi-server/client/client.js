@@ -1,6 +1,8 @@
 /**
  * Created by udantha on 4/5/14.
  */
-Template.taxies.taxies = function(){
-    return Taxi.find()
-}
+Template.taxiList.helpers({
+    taxies:function() {
+        return Taxi.find();
+    }
+})
