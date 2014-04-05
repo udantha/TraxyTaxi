@@ -10,5 +10,5 @@ Router.map(function(){
 
     this.route('taxiPage', {
         path: '/taxiapp'
-    })
-})
+    });
+});
