@@ -14,8 +14,13 @@ gmaps = {
     // our formatted marker data objects
     markerData: [],
 
+    infoWindows: [],
+
     // add a marker given our formatted marker data object
     addMarker: function(marker) {
+        var sts = marker.status==TAXI_STATUS_HIRE ? 'icon-idle.jpg'
+            : marker.status==TAXI_STATUS_IDLE ? 'icon-idle.jpg' : 'sphere.gif';
+
         var gLatLng = new google.maps.LatLng(marker.lat, marker.lng);
         var gMarker = new google.maps.Marker({
             position: gLatLng,
@@ -23,7 +28,7 @@ gmaps = {
             title: marker.title,
             // animation: google.maps.Animation.DROP,
             //icon:'http://maps.google.com/mapfiles/ms/icons/blue-dot.png'
-            icon: '/icon-idle.png'
+            icon: '/'+ sts
         });
         this.latLngs.push(gLatLng);
         this.markers.push(gMarker);
@@ -61,6 +66,14 @@ gmaps = {
             document.getElementById('map-canvas'),
             mapOptions
         );
+
+        var gMarker = new google.maps.Marker({
+            position: mapOptions.center,
+            map: this.map,
+            //title: marker.title,
+            // animation: google.maps.Animation.DROP,
+            icon:'http://maps.google.com/mapfiles/ms/icons/red-dot.png'
+        });
 
         // global flag saying we intialized already
         Session.set('map', true);
