@@ -50,7 +50,6 @@ gmaps = {
 
     // intialize the map
     initialize: function() {
-        console.log("[+] Intializing Google Maps...");
         var mapOptions = {
             zoom: 15,
             center: new google.maps.LatLng("6.941784", "79.879765"),
@@ -64,5 +63,28 @@ gmaps = {
 
         // global flag saying we intialized already
         Session.set('map', true);
+
+        //set to center
+        this.locateMe();
+    },
+
+    /**
+     * Set map to center
+     */
+    locateMe: function(){
+        function success(crd){
+            if(gmaps.map){
+                var latLong = new google.maps.LatLng(crd.coords.latitude, crd.coords.longitude);
+                gmaps.map.panTo(latLong);
+            }
+        }
+
+        function error(error) {
+            //console.log(error)
+        }
+
+        navigator.geolocation.getCurrentPosition(success, error);
     }
-}
+};
+
+
