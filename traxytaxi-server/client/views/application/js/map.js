@@ -37,3 +37,9 @@ Template.map.rendered = function() {
 Template.map.destroyed = function() {
     Session.set('map', false);
 }
+
+Template.map.events({
+    'click .locateme': function(e){
+        gmaps.locateMe();
+    }
+});
