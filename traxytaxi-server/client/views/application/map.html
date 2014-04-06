@@ -1,13 +1,17 @@
 <template name="map">
     <div class="row">
-        <div class="col-sm-4 main-button ">
-            <button type="button" class="locate-me locateme" id="sign-up">Locate Me</button>
+        <div class="col-xs-12 map-main">
+            <div class="col-xs-12 ">
+                <div id="map">
+                    <div id="map-canvas"></div>
+                </div>
+            </div>
         </div>
-        <div class="col-sm-3"></div>
     </div>
     <div class="row">
-        <div id="map">
-            <div id="map-canvas"></div>
+        <div class="col-sm-4 main-button ">
+            <button type="button" class="btn btn-warning btn-lg locate-me locateme" id="sign-up">Locate Me</button>
         </div>
-    </div>
+        <div class="col-sm-3"></div>
+    </div>    
 </template>
