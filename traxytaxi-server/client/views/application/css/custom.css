@@ -1,0 +1,44 @@
+.home-title {
+	text-align:center;
+	background:#E07D26;
+	color:#0067A6;
+}
+
+.home-form p{
+
+	font-size:20px;
+	color:#E35A26;
+}
+
+.home-select {	
+	text-align:center;
+	font-size:20px;
+	color:#E35A26;
+	
+}
+
+.home-select-button{
+	width:100%;
+}
+
+.sign-up-home{
+	padding:7px;
+}
+
+.locate-me{
+    font-size:30px;
+	width:100%;
+	padding-left: 0px;
+	padding-right: 0px;
+	margin-left: 0px;
+	margin-right: 0px;
+}
+
+.main-button{
+	width:100%;
+	padding:0px;
+}
+
+.map-main{
+	margin-top:60px;
+}
