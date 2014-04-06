@@ -1,24 +1,16 @@
-<div class="row">
-<header class="jumbotron col-xs-12 home-title"> 
-	<div class="container">
-		<h2><b> Traxy Map </b></h2>					
-	</div>
-</header>	
-</div>
-<div class="container">
-	<div class="row">
-		<div class="col-sm-4 main-button ">
-			<button type="button" class="btn btn-warning btn-lg locate-me" id="sign-up">Locate&#32;Me</button>
-		</div >
-		<div class="col-sm-3"></div>	
-	</div>
-	<div class="row">
-		<div class="col-xs-12 map-main">
-			<div class="col-xs-12 ">
-			   <template name="taxiList">    
-					{{> map}}
-				</template>
-			</div>	
-		</div>
-	</div>
-</div>
+<template name="taxiList">
+
+    <div class="row">
+        <header class="jumbotron col-xs-12 home-title">
+            <div class="container">
+                <h2><b> Traxy Map </b></h2>
+            </div>
+        </header>
+    </div>
+    <div class="container">
+        {{> map}}
+
+
+
+    </div>
+</template>
