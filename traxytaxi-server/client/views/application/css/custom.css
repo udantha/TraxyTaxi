@@ -1,7 +1,23 @@
 .home-title {
-	text-align:center;
-	background:#E07D26;
-	color:#0067A6;
+  background: none repeat scroll 0 0 #E35A26;
+  box-shadow: 3px 6px 9px 2px #E35A26;
+  color: #0067A6;
+  font-family: tahoma;
+  font-weight: normal;
+  height: 56px;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-size: ;
+}
+
+.home-title h2 {
+  color: #FFFFFF;
+  font-size: 22px;
+  letter-spacing: 0.01em;
+  line-height: 20px;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 .home-form p{
@@ -25,13 +41,20 @@
 	padding:7px;
 }
 
-.locate-me{
-    font-size:30px;
-	width:100%;
-	padding-left: 0px;
-	padding-right: 0px;
-	margin-left: 0px;
-	margin-right: 0px;
+.locate-me {
+  background: none repeat scroll 0 0 #E35A26;
+  border: medium none;
+  border-radius: 25px;
+  box-shadow: 0 0 14px 0 #E35A26;
+  color: #FFFFFF;
+  display: block;
+  font-size: 14px;
+  font-weight: bold;
+  height: 65px;
+  margin: 19px auto 10px;
+  padding: 10px;
+  text-transform: uppercase;
+  width: 69px;
 }
 
 .main-button{
@@ -40,5 +63,9 @@
 }
 
 .map-main{
-	margin-top:60px;
+	margin-top:25px;
+}
+#map-canvas {
+  min-height: 328px;
+  overflow: hidden;
 }
