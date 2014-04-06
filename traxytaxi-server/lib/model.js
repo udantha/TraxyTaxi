@@ -17,10 +17,10 @@ if (Meteor.isServer) {
 //allow services
 Taxi.allow({
     insert: function (document) {
-        return false;
+        return true;
     },
     update: function () {
-        return false;
+        return true;
     },
     remove: function () {
         return false;
