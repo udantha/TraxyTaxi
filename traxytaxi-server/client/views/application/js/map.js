@@ -28,6 +28,7 @@ Template.map.rendered = function() {
                     //update position
                     var newLatlng = new google.maps.LatLng(objMarker.lat, objMarker.lng);
                     mapMarker.setPosition(newLatlng);
+                    //mapMarker.setIcon('newImage.png');
                 }
             }
         });
