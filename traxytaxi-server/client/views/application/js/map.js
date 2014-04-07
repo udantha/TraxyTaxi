@@ -7,7 +7,10 @@ Template.map.rendered = function() {
 
     Deps.autorun(function() {
         var taxies = Taxi.find().fetch();
-
+        //clear markers
+        for (var i=0;i<gmaps.markers.length;i++) {
+            gmaps.markers[i].setMap(null);
+        }
         _.each(taxies, function(taxi) {
             if (typeof taxi !== 'undefined' &&
                 typeof taxi.latitude !== 'undefined' &&
@@ -29,12 +32,15 @@ Template.map.rendered = function() {
                 }else{
                     //update position
                     var newLatlng = new google.maps.LatLng(objMarker.lat, objMarker.lng);
-                    mapMarker.setPosition(newLatlng);
-                    mapMarker,setMap(null);
+                    //mapMarker.setPosition(newLatlng);
+
+                    mapMarker.setMap(null);
+                    mapMarker.setVisible(false);
                     //mapMarker.setIcon('newImage.png');
                 }
                 var sts = objMarker.status==TAXI_STATUS_HIRE ? '<span style="color: gray;">On Hire</span>'
                     : objMarker.status==TAXI_STATUS_IDLE ? '<span style="color: green;">Good to go!</span>' : '<span style="color: gray;">Stopped</span>';
+
                 var newMarker = gmaps.addMarker(objMarker);
                 var infowindow = new google.maps.InfoWindow({
                     content: '<div>' +

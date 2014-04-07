@@ -15,12 +15,25 @@ body {
 }
 
 .home-title h2 {
+  background: url("/taxi-app.png") no-repeat scroll 50% 0 rgba(0, 0, 0, 0);
   color: #FFFFFF;
   font-size: 22px;
   letter-spacing: 0.01em;
   text-align: center;
+  text-indent: -9999px;
   text-transform: uppercase;
 }
+
+.home-title h2.taxiapp {
+  background: url("/taxi-map.png") no-repeat scroll 50% 0 rgba(0, 0, 0, 0);
+  color: #FFFFFF;
+  font-size: 22px;
+  letter-spacing: 0.01em;
+  text-align: center;
+  text-indent: -9999px;
+  text-transform: uppercase;
+}
+
 
 .home-form p{
 
@@ -63,7 +76,7 @@ body {
 }
 
 .map-main{
-	margin-top:25px;
+	/*margin-top:25px;*/
 }
 #map-canvas {
   min-height: 376px;
@@ -75,10 +88,11 @@ body {
     border: medium none;
     border-radius: 50%;
     box-shadow: 0 0 8px 2px #D5D5D5;
+    clear: both;
     color: #FFFFFF;
     font-size: 20px;
     height: 80px;
-    margin: 0 10px;
+    margin: 10px;
     width: 80px;
 }
 

@@ -19,7 +19,7 @@ gmaps = {
     // add a marker given our formatted marker data object
     addMarker: function(marker) {
         var sts = marker.status==TAXI_STATUS_HIRE ? 'threewheeler.jpg'
-            : marker.status==TAXI_STATUS_IDLE ? 'icon-idle.png' : 'icon-idle.png';
+            : marker.status==TAXI_STATUS_IDLE ? 'taxi-idle.png' : 'taxi-idle.png';
 
         var gLatLng = new google.maps.LatLng(marker.lat, marker.lng);
         var gMarker = new google.maps.Marker({
